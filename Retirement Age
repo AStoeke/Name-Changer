@@ -1,0 +1,19 @@
+import java.util.Scanner;
+public class RetirementAge
+{
+   public static void main (String[] args) {
+       Scanner scan = new Scanner(System.in);
+       
+       System.out.println("Please enter your name.");
+       String name = scan.nextLine();
+       
+       System.out.println("Please enter what state you live in.");
+       String state = scan.nextLine();
+       
+       System.out.println("Please enter your age.");
+       int age = scan.nextInt();
+       
+       NameChanger change = new NameChanger(name, state, age);
+       System.out.println(change);
+   }
+}
