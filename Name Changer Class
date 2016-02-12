@@ -1,0 +1,42 @@
+public class NameChanger
+{
+   private String name, state, areCool;
+   private int age, retAge;
+   
+   public NameChanger(String naim, String stait, int aige) {
+       name = naim;
+       state = stait;
+       age = aige;
+       allCaps();
+       retire();
+       stateMN();
+   }
+   
+   public String allCaps() {
+       name = name.toUpperCase();
+       return name;
+   }
+   
+   public int retire() {
+       retAge = 65 - age;
+       return retAge;
+   }
+   
+   public String stateMN() {
+       if(state.equalsIgnoreCase("Minnesota"))
+           areCool = "You're pretty chill. -badum tsss-";
+      
+       else
+       areCool = "\nYou should move to Minnesota. It's pretty cool here. -badum tsss-";
+       return areCool;
+    }
+   
+   public String toString() {
+       if(retAge > 0) {
+           return "Hi " + name + ". You are " + retAge + " years from retirement. " + areCool;
+       }
+       else {
+           return "Hi " + name + ". You are retired. " + areCool;
+       }
+   }
+}
